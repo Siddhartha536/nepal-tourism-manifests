@@ -2,6 +2,7 @@
 nepaltoursim:
   namespace: nepal-tourism
   labels: nt
+namespace: nepal-tourism
 replicaCount: 2
 
 
