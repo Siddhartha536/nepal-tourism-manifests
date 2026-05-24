@@ -7,7 +7,7 @@ replicaCount: 2
 
 
 image:
-  repository: siddhartha536   # change to your Docker Hub username
+  repository: siddhartha536/nepal-tourism-microservice-backend:v1.0.1   # change to your Docker Hub username
   pullPolicy: IfNotPresent
   tag: "latest"                            # will be updated by Jenkins
 
