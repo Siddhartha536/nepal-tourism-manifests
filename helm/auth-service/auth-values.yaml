@@ -1,0 +1,33 @@
+# auth variables
+nepaltoursim:
+  namespace: nepal-tourism
+  labels: nt
+replicaCount: 2
+
+
+image:
+  repository: siddhartha536   # change to your Docker Hub username
+  pullPolicy: IfNotPresent
+  tag: "latest"                            # will be updated by Jenkins
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
+
+# Environment variables for the specific microservice
+env:
+  SERVICE_NAME: "auth"
+  PORT: "5000"
+
+# Sensitive data – will be base64-encoded in the secret template
+secrets:
+  mongoUri: "mongodb+srv://siddhartha:siddhartha@nepal-tourism.dl9evnu.mongodb.net/central-db"   # placeholder
+  jwtSecret: "temp_secret"                       
+
+# Horizontal Pod Autoscaler
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 80
