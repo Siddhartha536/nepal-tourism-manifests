@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nepal-tourism-trek
+spec:
+  destination:
+    name: ''
+    namespace: https://kubernetes.default.svc
+  source:
+    path: helm/nepal-tourism-trek
+    repoURL:
+      git@github.com:Siddhartha536/nepal-tourism-manifests.git
+    targetRevision: develop
+    helm:
+      valueFiles:
+        - nepal-tourism-trek-values.yaml
+  sources: []
+  project: nepal-tourism
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - ApplyOutofSyncOnly=true
