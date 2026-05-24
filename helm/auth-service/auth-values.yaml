@@ -7,9 +7,9 @@ replicaCount: 2
 
 
 image:
-  repository: siddhartha536/nepal-tourism-microservice-backend:v1.0.1   # change to your Docker Hub username
+  repository: siddhartha536/nepal-tourism-microservice-backend  # change to your Docker Hub username
   pullPolicy: IfNotPresent
-  tag: "latest"                            # will be updated by Jenkins
+  tag: "v1.0.1"                            # will be updated by Jenkins
 
 service:
   type: ClusterIP
