@@ -19,7 +19,7 @@ service:
 # Environment variables for the specific microservice
 env:
   SERVICE_NAME: "frontend"
-  PORT: "5000"
+  PORT: "80"
 
 # Sensitive data – will be base64-encoded in the secret template
 secrets:
