@@ -9,7 +9,7 @@ replicaCount: 1
 image:
   repository: siddhartha536/nepal-tourism-microservice-backend  # change to your Docker Hub username
   pullPolicy: IfNotPresent
-  tag: "1a0ac2c"                            # will be updated by Jenkins
+  tag: "c89eb5e"                            # will be updated by Jenkins
 
 service:
   type: ClusterIP
